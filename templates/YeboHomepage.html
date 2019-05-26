@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Yebo Marketplace</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      
+      .navigation {
+  list-style: none;
+  margin: 0;
+  background: FireBrick;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: white;
+  color: FireBrick;
+}
+        
+
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+.photo {
+  padding-top: 1vh;
+  text-align: center;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  
+}
+
+.about {
+  text-align:center;
+  color:firebrick;
+  padding-top: 60px;
+  margin-top: -60px;
+  padding-bottom: 100px;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  position: relative;
+  bottom: 5%;
+}
+
+.footer {
+  background:FireBrick;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+
+}
+.footer a {
+  background:FireBrick;
+  color:white;
+  text-align: center;
+
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+
+<body>
+  <div>
+    <a>
+      <li>
+        <img src="file:///root/yebo/static/Yebo_Logo_White.png" id="Logo">
+      </li>
+    </a>
+  </div>
+  <div>
+    <ul class="navigation">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="/app">App</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  
+  <div name="home" class="photo"><a href="/app">
+    <img src="file:///root/yebo/static/Yebo_Logo_w_store_icons.png" id="Logo" class="photo">
+  </div>
+  
+  
+  <div name="about" class="about">
+    <h1>About Us</h1>
+      <p>Yebo Marketplace is a startup company focused on "multi-platform technology based on a proprietary universal compression algorithm."</p><br>
+      <p>The company was started when Richard Hendricks, a software engineer who was working at Hooli, created a songwriter-oriented music app called Pied Piper that made it easier for songwriters to determine if their work infringed on other’s copyright. The app was created at the Hacker Hostel, a "tech incubator" at Palo Alto in the house of Erlich Bachman, an entrepreneur and founder of airline booking aggregator Aviato. Upon discovery of the revolutionary compression algorithm in the app by workers at Hooli, a short betting war for the company began between Gavin Belson and Peter Gregory. Richard chooses Peter's offer, which was a $200,000 investment for 5% of the company. Richard hires inhabitants of the Hacker Hostel to work for Pied Piper including Erlich, Dinesh, Gilfoyle, and Big Head. Big Head was later fired because of a lack of purpose at Pied Piper.</p>
+  </div>
+  
+  <div name="contact" class="container">
+    <h1>Contact Us</h1>
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="tanzania">Tanzania</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+  
+
+</body>
+  <footer class="footer">
+    <div>
+      <a>&copy;Yebo Marketplace 2019</a><br>
+      <a href="mailto:yebomarketplace@gmail.com">Contact Us</a>
+    </div>
+  </footer>
+</html>
