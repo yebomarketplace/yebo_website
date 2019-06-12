@@ -13,7 +13,7 @@
         <div class="image">
             <img src="{{url_for('static', filename=info['photo'])}}" alt="{{info['photo']}}">
             <div class="name">
-                <h3>{{info['likes']}}</h3>
+                <h3>User: {{info['username']}} Likes:{{info['likes']}}</h3>
             </div>
         </div>
         <p class='media'>{{info['comment']}}</p>
