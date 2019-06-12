@@ -10,13 +10,13 @@
     {{first_event}} {{second_event}}
     {% for info in info %}
     <div class="photo">
+        <div class="image">
             <img src="{{url_for('static', filename=info['photo'])}}" alt="{{info['photo']}}">
             <div class="name">
                 <h3>{{info['likes']}}</h3>
             </div>
-            </div>
-                <p class='media'>{{info['comment']}}</p>
-            </div>
+        </div>
+        <p class='media'>{{info['comment']}}</p>
     </div>
     {% endfor %}      
 </body>
