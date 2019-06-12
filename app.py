@@ -12,7 +12,7 @@ def create_dict(d_name):
         comment = item['edge_media_to_caption']['edges'][0]['node']['text']
         likes = str(item['edge_media_preview_like']['count'])
         d_info.append({
-        'photo':url,
+        'photo':d_name+'/'+url,
         'comment':comment,
         'likes':likes
         })
