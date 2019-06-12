@@ -9,8 +9,6 @@ def hello_world():
 
 @app.route('/app')
 def hello_photos():
-    return render_template('YeboPhotoApp.html')
-#integrate this to do the photos
-hists = os.listdir('static/plots')
-hists = ['plots/' + file for file in hists]
-return render_template('report.html', hists = hists)
+    photos = os.listdir('static/IGPosts')
+    photos = ['IGPosts/' + file for file in photos]
+    return render_template('YeboPhotoApp.html', photos = photos)
