@@ -6,7 +6,7 @@
     </title>
 </head>
 <body>
-    {{first_event}} to {{second_event}}
+    {{first_event}} {{second_event}}
     {% for info in info %}
     <div class="photo">
         <img src="{{url_for('static', filename=info['photo'])}}" alt="{{info['photo']}}">
