@@ -8,7 +8,9 @@
 <body>
     {{first_event}} to {{second_event}}
     {% for photos in photos %}
-    <img src="{{url_for('static', filename=photos)}}" alt="{{photos}}">
+    <div class="photo">
+        <img src="{{url_for('static', filename=photos)}}" alt="{{photos}}">
+    </div>
     {% endfor %}
 </body>
 </html>`
