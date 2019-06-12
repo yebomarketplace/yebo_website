@@ -37,5 +37,5 @@ def hello_photos():
     directory = os.listdir('static/IGContent/')
     directory = [file for file in directory if not file.endswith('.log')]
     info = [create_dict(folder) for folder in directory]
-    info = [item for sublist in trial for item in sublist]
+    info = [item for sublist in info for item in sublist]
     return render_template('YeboPhotoApp.html', info = info)
