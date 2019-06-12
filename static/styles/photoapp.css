@@ -41,7 +41,6 @@ h3 {
 }
 .image {
   height:250px;
-  overflow:hidden;
   position:relative;
 }
 .image img{
