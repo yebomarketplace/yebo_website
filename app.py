@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template
-import os, json
+import os, glob, json
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -10,6 +10,6 @@ def hello_world():
 
 @app.route('/app')
 def hello_photos():
-    photos = os.listdir('static/IGPosts')
+    photos = glob.glob('static/IGPosts/*.jpg')
     photos = ['IGPosts/' + file for file in photos]
     return render_template('YeboPhotoApp.html', photos = photos)
