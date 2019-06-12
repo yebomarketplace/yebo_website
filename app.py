@@ -11,5 +11,4 @@ def hello_world():
 @app.route('/app')
 def hello_photos():
     photos = glob.glob('static/IGPosts/*.jpg')
-    photos = ['IGPosts/' + file for file in photos]
     return render_template('YeboPhotoApp.html', photos = photos)
