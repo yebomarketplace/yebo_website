@@ -10,6 +10,10 @@
     {% for info in info %}
     <div class="photo">
         <img src="{{url_for('static', filename=info['photo'])}}" alt="{{info['photo']}}">
+        <ul>
+            <li>{{info['comment']}}</li>
+            <li>{{info['likes']}}</li>
+        </ul>
     </div>
     {% endfor %}
 </body>
