@@ -1,12 +1,11 @@
 * {
-  margin: 10;
-  padding: 10;
-  border: 10;
+  margin: 0;
+  padding: 0;
+  border: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   list-style-type: none;
-  text-align: center;
 }
 body {
   color:#FFF;
@@ -31,6 +30,7 @@ h3 {
   height:300px;
   position:relative;
   display:inline-block;
+  overflow:hidden;
   cursor: pointer;
   margin:0 10px 10px 0;
   -webkit-border-radius:0 0 7px 7px;
@@ -41,12 +41,13 @@ h3 {
 }
 .image {
   height:250px;
-  margin
+  overflow:hidden;
   position:relative;
 }
 .image img{
   width:100%;
   transition: all 1s ease;
+  margin-top:-70px;
 }
 .image:hover img{
   transform: scale(1.2) rotate(-3deg);
@@ -91,6 +92,7 @@ h3 {
   opacity: 0.85;
   filter: alpha(opacity=85); /* IE8 and Lower */
   zoom: 1; /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+  overflow:hidden;
   position:absolute;
   bottom:0;
   text-align: center;
