@@ -113,6 +113,7 @@ h3 {
 .media p {
   display:inline-block;
   padding:0 7px;
+  overflow:scroll;
 }
 footer {
   font-size:0.7em;
