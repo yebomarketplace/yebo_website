@@ -104,9 +104,9 @@ h3 {
   width:100%;
   font-size:0.7em;
   color:#777;
-  padding:15px;
+  padding:5px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
   line-height: 20px;
   overflow:scroll;
 }
