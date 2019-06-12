@@ -12,12 +12,13 @@
     <div class="photo">
         <div class="image">
             <img src="{{url_for('static', filename=info['photo'])}}" alt="{{info['photo']}}">
-            <li>{{info['likes']}}</li>
+            <div class="name">
+                <h3>{{info['likes']}}</h3>
             </div>
-            <ul class='name'>
+        </div>
+            <ul class='media'>
                <li>{{info['comment']}}</li>
             </ul>
-        
     </div>
     {% endfor %}
 </body>
