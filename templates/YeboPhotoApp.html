@@ -2,26 +2,26 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/photoapp.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <title>
         Store Report
     </title>
 </head>
 <body>
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+<div class='sidebar'>
+<form>
+  Img Link:<br>
+  <input type="text" name="link"><br>
+  Seller:<br>
+  <input type="text" name="username"><br>
+  Phone number<br>
+  <input type="text" name="phone"><br>
+  Price<br>
+  <input type="text" name="price"><br>
+  Tags<br>
+  <input type="text" name="username"><br>
+  <input type="submit" value="Submit"><br>
+</form>
 </div>
-
-<div id="main">
-  <button class="openbtn" onclick="openNav()">&#9776; Toggle Sidebar</button> 
-  <h2>Collapsed Sidebar</h2>
-  <p>Content...</p>
-</div>
-    
 <div class='content'>
     {{first_event}} {{second_event}}
     {% for info in info %}
@@ -34,7 +34,7 @@
         </div>
         <p class='media'>{{info['comment']}}</p>
     </div>
-    {% endfor %}  
+    {% endfor %}
 </div>
 <script>
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
@@ -50,4 +50,3 @@ function closeNav() {
 }
 </script>
 </body>
-</html>`
