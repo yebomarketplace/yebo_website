@@ -18,11 +18,13 @@ def create_dict(d_name):
             comment = "Null"
         likes = str(item['edge_media_preview_like']['count'])
         username = item['username']
+        timestamp = item['taken_at_timestamp']
         d_info.append({
             'photo':'IGContent/'+d_name+'/'+url,
             'comment':comment,
             'likes':likes,
-            'username':username
+            'username':username,
+            'timestamp':timestamp
         })
     return d_info
     
@@ -38,4 +40,5 @@ def hello_photos():
     directory = [file for file in directory if not file.endswith('.log')]
     info = [create_dict(folder) for folder in directory]
     info = [item for sublist in info for item in sublist]
+    info = sorted(info, key=lambda k: k['timestamp'], reverse=True)
     return render_template('YeboPhotoApp.html', info = info)
