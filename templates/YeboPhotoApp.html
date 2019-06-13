@@ -13,6 +13,9 @@
     <div class="photo">
         <div class="image">
             <img src="{{url_for('static', filename=info['photo'])}}" alt="{{info['photo']}}">
+            <div class="likes">
+	    		<i class="fas fa-heart ls data-test="pulse"></i>
+			</div>
             <div class="name">
                 <h3>User: {{info['username']}} Likes:{{info['likes']}}</h3>
             </div>
