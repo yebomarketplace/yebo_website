@@ -53,7 +53,7 @@ h3 {
   -ms-transform: scale(1.2) rotate(-3deg); /* IE 9 */
   -webkit-transform: scale(1.2) rotate(-3deg); /* Safari and Chrome */
 }
-.fa-heart-o:hover {
+.fa-heart:hover {
   animation-name: pulse; 
   animation-duration: 0.5s; 
   animation-iteration-count: infinite; 
